@@ -1,0 +1,18 @@
+---
+
+- hosts: rhel
+  become: yes
+  tasks:
+  - yum:
+      name: httpd
+      state: present
+    notify: restart http
+  - copy:
+      src: /home/ansible/testfile
+      dest: /home/anisble/test
+    notify: restart http
+  handlers:
+  - name: restart http
+    service:
+      name: httpd
+      state: restarted 

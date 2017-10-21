@@ -1,0 +1,11 @@
+- hosts: rhel
+  name: script to replace somthing
+  tasks:
+  - lineinfile:
+      name: lineinfile
+      path: /home/anisble/test
+      regexp: '[qQ]lity[Tt]hought'
+      insertafter: '[qQ]lity[Tt]hought'
+      line: 'sushant'
+
+    

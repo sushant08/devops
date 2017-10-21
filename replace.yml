@@ -1,0 +1,7 @@
+- hosts: rhel
+  name: script to replace somthing
+  tasks:
+  - replace:
+     path: /home/ansible/test
+     regexp: '[Qq]uality[Tt]hought'
+     replace: 'QualityThoughtTech'
